@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#eaf5ff">
+  <meta name="description" content="A little exam encouragement, focus timer, and study checklist for you.">
+  <title>Your Exam Cheer 💙</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"><span>✦</span><span>✧</span><span>·</span><span>✦</span><span>✧</span><span>·</span></div>
+  <main class="container">
+    <header class="topline">
+      <a class="brand" href="#top" aria-label="Your Exam Cheer home"><span class="brand-icon">✦</span> YOUR EXAM CHEER</a>
+      <span class="badge">A reminder for you 💙</span>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> FOR THE DAYS YOU NEED A LITTLE PUSH</p>
+        <h1>You’ve got this.<br><span>One step at a time.</span></h1>
+        <p class="intro">You don't have to know everything today. You don't have to feel confident every minute. Just start with what you can do, keep going at your own pace, and give yourself a fair chance.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#study-tools">Let's get focused <span>↓</span></a>
+          <button class="button ghost" id="scroll-pep" type="button">I need encouragement ✨</button>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="halo halo-one"></div><div class="halo halo-two"></div>
+        <div class="art-card"><span class="big-star">✦</span><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="mini-note">BREATHE<br>THEN BEGIN</div></div>
+        <div class="float-chip chip-one">Progress, not perfection</div>
+        <div class="float-chip chip-two">You've come this far ✨</div>
+      </div>
+    </section>
+
+    <section class="pep-section" id="pep-section" aria-labelledby="pep-title">
+      <div class="section-heading"><p class="eyebrow">A quick reminder</p><h2 id="pep-title">A message for your mind</h2><p>Whenever your confidence drops, tap below.</p></div>
+      <div class="pep-card"><span class="quote-mark" aria-hidden="true">“</span><p id="pep-output" aria-live="polite">You don't need to feel ready to begin. Open your notes, choose one small thing, and start there. The next step is enough for now.</p><button id="pep-button" class="button primary" type="button">Give me another boost <span>↗</span></button></div>
+    </section>
+
+    <section class="tools-section" id="study-tools" aria-labelledby="tools-title">
+      <div class="section-heading"><p class="eyebrow">Make today manageable</p><h2 id="tools-title">Small actions. Real progress.</h2><p>You're not trying to conquer the whole syllabus in one sitting.</p></div>
+      <div class="tools-grid">
+        <article class="panel checklist-panel">
+          <div class="panel-title"><span class="icon-box">✓</span><div><p class="eyebrow">Your next steps</p><h3>Study checklist</h3></div></div>
+          <p class="panel-intro">Tick these off as you go. Your progress is saved in this browser.</p>
+          <div class="checklist">
+            <label class="check-item"><input type="checkbox" data-task="water"><span class="fake-check"></span><span>Get water and clear my study space.</span></label>
+            <label class="check-item"><input type="checkbox" data-task="topic"><span class="fake-check"></span><span>Choose one topic to work on first.</span></label>
+            <label class="check-item"><input type="checkbox" data-task="practice"><span class="fake-check"></span><span>Work through a problem or past-paper question.</span></label>
+            <label class="check-item"><input type="checkbox" data-task="break"><span class="fake-check"></span><span>Take a proper break when I need one.</span></label>
+            <label class="check-item"><input type="checkbox" data-task="kindness"><span class="fake-check"></span><span>Speak to myself like I would to a friend.</span></label>
+          </div>
+          <div class="progress-meta"><span id="progress-label">0 of 5 completed</span><span id="progress-percent">0%</span></div>
+          <div class="progress-track" role="progressbar" aria-label="Study checklist progress" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progress-bar"><span id="progress-fill"></span></div>
+          <button class="text-button" id="reset-checklist" type="button">Reset checklist</button>
+        </article>
+
+        <article class="panel timer-panel">
+          <div class="panel-title"><span class="icon-box timer-icon">◷</span><div><p class="eyebrow">One thing at a time</p><h3>Focus timer</h3></div></div>
+          <p class="panel-intro">Try 25 minutes of focused study, then give yourself a 5-minute break.</p>
+          <div class="timer-circle" id="timer-circle"><div><span id="timer-display" aria-live="polite">25:00</span><small id="timer-mode">FOCUS SESSION</small></div></div>
+          <p class="timer-status" id="timer-status" aria-live="polite">Ready when you are.</p>
+          <div class="timer-buttons"><button class="button primary" id="timer-start" type="button">Start focus</button><button class="button ghost" id="timer-reset" type="button">Reset</button></div>
+          <p class="tiny-note">The timer runs while this page stays open.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="exam-plan" aria-label="Exam day reminders">
+      <div class="plan-symbol" aria-hidden="true">✎</div><div><p class="eyebrow">When you sit down to write</p><h2>Read. Breathe. Solve.</h2><p>Read each question properly. Write down the information you're given. Start with what you understand, show your working, and keep an eye on the time. If a question gets tough, move on and come back to it.</p></div>
+    </section>
+
+    <section class="closing" aria-label="Final encouragement"><div class="closing-spark" aria-hidden="true">✦</div><p class="eyebrow">One last thing</p><h2>Your marks matter, but they are not your whole identity.</h2><p>You've put effort into getting here. Let that count. Ask for help when you need it, rest without guilt, and keep giving yourself another chance.</p><div class="signature">Keep going — you've got this. <span>💙</span></div><button class="button blue-light" id="kindness-button" type="button">Give me a kind reminder ♡</button><p id="kindness-output" class="kindness-output" aria-live="polite"></p></section>
+
+    <footer><span>Made for your exam-season journey</span><span class="footer-heart">✦</span><span>One step at a time.</span></footer>
+  </main>
+</body>
+</html>
